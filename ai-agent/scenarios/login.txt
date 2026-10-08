@@ -1,0 +1,5 @@
+Test the login functionality with valid credentials.
+Navigate to the login page.
+Enter a valid username and password.
+Click the login button.
+Verify that the user is successfully logged in.

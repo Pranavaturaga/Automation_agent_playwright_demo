@@ -1,34 +1,77 @@
-# Playwright Automation Project
+Playwright Automation & AI Agent Demo
 
-This project contains automated end-to-end tests created using Playwright and TypeScript.
+A Playwright and TypeScript-based test automation project demonstrating UI automation, CI execution, and exploration of AI-assisted test automation.
 
-## Tests
-
-The current automation covers the Facebook login and password recovery flow.
-
-### Test 1 - Facebook Login Page
-
-- Opens the Facebook login page
-- Verifies the page title
-- Verifies the Log In button is visible
-- Verifies the Forgot Password option is visible
-
-### Test 2 - Forgot Password Page
-
-- Opens the Facebook login page
-- Clicks the Forgot Password option
-- Verifies that the password recovery page opens
-
-## Technology
+Tech Stack
 
 - Playwright
 - TypeScript
 - Node.js
 - GitHub Actions
+- AI-assisted test automation
 
-## How to Run
+Automation Coverage
 
-Install dependencies:
+The project currently includes automated scenarios for:
 
-```bash
-npm install
+- Login
+- Forgot Password
+
+The tests are implemented using Playwright with TypeScript.
+
+AI Agent Exploration
+
+This repository also contains a small AI-agent proof of concept exploring how AI can support the QA automation workflow.
+
+Current Concept
+
+The agent takes a test scenario written in natural language and is designed to:
+
+1. Read the test scenario
+2. Generate a Playwright test
+3. Save the generated test script
+4. Execute the generated test
+5. Produce a Playwright HTML report
+
+Workflow
+
+Test Scenario
+      ↓
+   AI Agent
+      ↓
+Generate Playwright Test
+      ↓
+   Execute Test
+      ↓
+ Playwright HTML Report
+
+The AI-agent implementation is currently a POC and is being developed incrementally as part of my exploration of AI-assisted QA automation.
+
+Project Structure
+
+Automation_agent_playwright_demo/
+│
+├── ai-agent/
+│   ├── agent.ts
+│   ├── generate-test.ts
+│   └── scenarios/
+│       └── login.txt
+│
+├── tests/
+│   ├── login.spec.ts
+│   └── forgot-password.spec.ts
+│
+├── .github/
+│   └── workflows/
+│
+├── playwright.config.ts
+├── package.json
+└── README.md
+
+CI/CD
+
+GitHub Actions is used to run the Playwright automation as part of the CI workflow.
+
+Purpose
+
+The goal of this project is to explore how traditional test automation can be extended with AI-agent capabilities to reduce repetitive QA work and improve test creation and execution workflows.
